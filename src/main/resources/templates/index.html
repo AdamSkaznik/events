@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org" xmlns:sd="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.w3.org/1999/xhtml"
+      th:replace="~{fragments/layout::layout(~{::.container})}">
+<link href="/static/fullcalendar/main.css" rel="stylesheet" th:href="@{/fullcalendar/main.css}">
+<script src="/static/fullcalendar/main.js" th:src="#{/fullcalendar/main.js}"></script>
+<head>
+<body>
+<div class="col-sm-8">
+    <div id='calendar'></div>
+</div>
+</body>
+</html>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            // themeSystem: 'bootstrap',
+            // plugins: [ bootstrapPlugin ],
+            // themeSystem: 'bootstrap',
+            headerToolbar: {
+                left: 'dayGridMonth,timeGridWeek,timeGridDay',
+                center: 'title',
+                right: 'prevYear,prev,next,nextYear'
+            },
+            locale: 'pl',
+            initialView: 'dayGridMonth'
+        });
+        calendar.render();
+    });
+
+</script>

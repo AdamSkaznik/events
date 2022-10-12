@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="/css/fontawesome.min.css" th:href="@{/css/fontawersome.min.css}">
+  <link rel="stylesheet" href="/css/fontawesome.css" th:href="@{/css/fontawersome.css}">
+  <script th:src="@{/js/fontawesome.min.js}"></script>
+</head>
+<body>
+<nav th:fragment="navbar" class="navbar navbar-light" style="background-color: #5bc0de">
+
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="navbar navbar-nav">
+<!--      <table>-->
+<!--        <tr>-->
+<!--          <td>Jesteś zalogowany jako : </td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--          <td><center><b><span th:text="${#authentication.getPrincipal().getUsername()}"></span></b></center></td>-->
+<!--         -->
+<!--        </tr>-->
+<!--      </table>-->
+    </ul>
+
+
+  </div>
+
+</nav>
+
+</body>
+
+</html>
